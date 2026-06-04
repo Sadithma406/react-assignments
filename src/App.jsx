@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import { Link } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
         </div>
         <div>
           <h1>Get started</h1>
+          <h2><Link to="/assignment_1">Assignment 1</Link></h2>
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
