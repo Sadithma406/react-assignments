@@ -9,7 +9,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div id="application">
       <h1 style={{ fontSize: '2rem', fontWeight: 'bold', textDecoration: 'underline' }}>REACT ASSIGNMENTS</h1>
       <section id="center">
         <div className="hero">
@@ -21,11 +21,12 @@ function App() {
           <ul>
             <li><h2><Link to="/assignment_1" style={{ textDecoration: 'none', color: 'white' }}>Assignment 1</Link></h2></li>
             <li><h2><Link to="/assignment_2" style={{ textDecoration: 'none', color: 'white' }}>Assignment 2</Link></h2></li>
+           { /* <li><h2><Link to="/assignment_3" style={{ textDecoration: 'none', color: 'white' }}>Assignment 3</Link></h2></li>*/}
           </ul>
         </div>
       </section>
 
-    </>
+    </div>
   )
 }
 

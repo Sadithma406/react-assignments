@@ -35,7 +35,7 @@
   }
 }
 
-#center {
+#application #center {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -49,7 +49,7 @@
   }
 }
 
-li {
+#application li {
   background-color: rgb(214, 166, 253);
   width: 800px;
   padding: 10px 10px 10px 30px;
@@ -57,4 +57,5 @@ li {
   text-align: left;
   text-decoration: none;
   color: white;
+  margin: 10px;
 }
