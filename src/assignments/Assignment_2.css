@@ -1,0 +1,26 @@
+#ass2 select {
+  width: 200px;
+  margin: 30px 0px 0px 30px;
+  padding: 10px;
+}
+
+#ass2 input {
+  width: 150px;
+  margin: 30px 0px 0px 30px;
+  padding: 10px;
+}
+
+#ass2 button {
+  background-color: rgb(196, 35, 254);
+  color: white;
+  width: 150px;
+  margin: 30px 0px 0px 30px;
+  padding: 10px;
+}
+
+#ass2 p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 30px 0px 0px 30px;
+  padding: 10px;
+}

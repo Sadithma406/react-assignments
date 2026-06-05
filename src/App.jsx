@@ -20,6 +20,7 @@ function App() {
         <div>
           <ul>
             <li><h2><Link to="/assignment_1" style={{ textDecoration: 'none', color: 'white' }}>Assignment 1</Link></h2></li>
+            <li><h2><Link to="/assignment_2" style={{ textDecoration: 'none', color: 'white' }}>Assignment 2</Link></h2></li>
           </ul>
         </div>
       </section>
