@@ -18,9 +18,9 @@ function Styling() {
   return (
     <div id="ass6">
       <label>Enter the name of the style:  </label>
-      <input type="text" onChange={(e) => setName(e.target.value)}></input><br />
+      <input type="text" value={name} onChange={(e) => setName(e.target.value)}></input><br />
       <label>Enter the value of the style:  </label>
-      <input type="text" onChange={(e) => setValue(e.target.value)}></input><br />
+      <input type="text" value={value} onChange={(e) => setValue(e.target.value)}></input><br />
       <button onClick={addStyle}>Add</button>
 
 
