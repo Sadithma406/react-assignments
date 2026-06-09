@@ -6,7 +6,7 @@ import './App.css'
 import { Link } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0) 
+  const [count, setCount] = useState(0)
 
   return (
     <div id="application">
@@ -21,10 +21,12 @@ function App() {
           <ul>
             <li><h2><Link to="/assignment_1" style={{ textDecoration: 'none', color: 'white' }}>Assignment 1</Link></h2></li>
             <li><h2><Link to="/assignment_2" style={{ textDecoration: 'none', color: 'white' }}>Assignment 2</Link></h2></li>
-           <li><h2><Link to="/assignment_3" style={{ textDecoration: 'none', color: 'white' }}>Assignment 3</Link></h2></li>
-          <li><h2><Link to="/assignment_4" style={{ textDecoration: 'none', color: 'white' }}>Assignment 4</Link></h2></li>
-          <li><h2><Link to="/assignment_5" style={{ textDecoration: 'none', color: 'white' }}>Assignment 5</Link></h2></li>
-          <li><h2><Link to="/assignment_6" style={{ textDecoration: 'none', color: 'white' }}>Assignment 6</Link></h2></li> 
+            <li><h2><Link to="/assignment_3" style={{ textDecoration: 'none', color: 'white' }}>Assignment 3</Link></h2></li>
+            <li><h2><Link to="/assignment_4" style={{ textDecoration: 'none', color: 'white' }}>Assignment 4</Link></h2></li>
+            <li><h2><Link to="/assignment_5" style={{ textDecoration: 'none', color: 'white' }}>Assignment 5</Link></h2></li>
+            <li><h2><Link to="/assignment_6" style={{ textDecoration: 'none', color: 'white' }}>Assignment 6</Link></h2></li>
+            <li><h2><Link to="/assignment_7" style={{ textDecoration: 'none', color: 'white' }}>Assignment 7</Link></h2></li>
+            <li><h2><Link to="/assignment_8" style={{ textDecoration: 'none', color: 'white' }}>Assignment 8</Link></h2></li>
           </ul>
         </div>
       </section>
