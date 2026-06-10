@@ -3,8 +3,8 @@ import axios from 'axios';
 
 function pageLimit() {
   const [color, setColor] = useState("");
-  const [limit, setLimit] = useState("");
-  const [page, setPage] = useState("");
+  const [limit, setLimit] = useState(0);
+  const [page, setPage] = useState(0);
   const [results, setResults] = useState({ data: [], total: 0 });
   let pages = Math.ceil(results.total / limit);
 
