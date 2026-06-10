@@ -5,7 +5,7 @@ function UsingAxios() {
   const [colors, setColors] = useState([]);
 
   useEffect(() => {
-    axios.get("https://api.allorigins.win/raw?url=https://apis.dnjs.lk/objects/colors.php")
+    axios.get("https://apis.dnjs.lk/objects/colors.php")
       .then(response => {
         console.log(response.data);
         setColors(response.data);
@@ -18,7 +18,7 @@ function UsingAxios() {
       <ul style={{ listStyleType: "none", padding: 0 }}>
         {colors.map((color, index) => (
           <li key={index}>
-            {color.name} — {color.code}
+            {color.name} — <span style={{ color: color.code }}>{color.code}</span>
           </li>
         ))}
       </ul>
