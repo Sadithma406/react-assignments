@@ -37,12 +37,7 @@ function pageLimit() {
         {Array.from({ length: pages }, (_, i) => i + 1).map((page) => {
           return <button key={page} onClick={() => search(page)}>{page}</button>
         })}
-      </div>
-      <div>
-        {Array.from({ length: 10 }, (_, i) => i + 1).map((item) => (
-          <button key={item}>{item}</button>
-        ))}
-      </div>
+      </div>  
     </div>
   )
 
