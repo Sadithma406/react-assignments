@@ -9,13 +9,12 @@ function JWT() {
   const [success, setSuccess] = useState(false);
 
   async function handleLogin() {
-
     try {
       const response = await axios.post('https://auth.dnjs.lk/api/login', {
         email: email, password: password
       })
       console.log(response.data);
-      setMsg("Successfully logged in" + response.data.access_token);
+      setMsg("Successfully logged in");
       setSuccess(true);
     }
     catch (error) {
