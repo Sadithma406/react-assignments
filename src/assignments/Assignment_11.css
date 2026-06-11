@@ -1,0 +1,12 @@
+#ass11 .user-data {
+
+  border: 1px solid black;
+  width:500px;
+  padding: 10px;
+  margin:20px auto;
+  align-items: center;
+}
+#ass11 .user-data img{
+  border-radius:50%;
+}
+
