@@ -17,6 +17,7 @@ function pageLimit() {
           setAlerts("Limit must be at least 1");
           return;
         }
+        setAlerts("");
         setResults(response.data);
         setPage(targetPage);
         setPages(Math.ceil(response.data.total / limit));
