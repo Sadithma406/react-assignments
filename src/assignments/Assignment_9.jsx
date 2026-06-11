@@ -8,6 +8,8 @@ function pageLimit() {
   const [results, setResults] = useState({ data: [], total: 0 });
   const [alerts, setAlerts] = useState("");
   const [pages, setPages] = useState(0);
+  const [active, setActive] = useState(0);
+
 
   function search(targetPage) {
 
@@ -30,11 +32,21 @@ function pageLimit() {
     <div id="ass9">
       <label>Color:  </label>
       <input type="text" onChange={(e) => setColor(e.target.value)}></input>
-      <label>Page number:  </label>
-      <input type="number" onChange={(e) => setPage(Number(e.target.value))} ></input>
       <label>Limit per page:  </label>
-      <input type="number" onChange={(e) => setLimit(Number(e.target.value))}></input>
-      <button onClick={() => search(page)}>Search</button><br /><br /><br />
+      <select onChange={(e) => setLimit(Number(e.target.value))}>
+        <option></option>
+        <option value='1'>1</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5</option>
+        <option value='6'>6</option>
+        <option value='7'>7</option>
+        <option value='8'>8</option>
+        <option value='9'>9</option>
+        <option value='10'>10</option>
+      </select>
+      <button onClick={() => { search(1), setActive(1) }}>Search</button><br /><br /><br />
       <br /><p style={{ color: 'red' }}>{alerts}</p>
       <ul>
         {results.data.map((item, index) =>
@@ -43,7 +55,7 @@ function pageLimit() {
       </ul>
       <div>
         {Array.from({ length: pages }, (_, i) => i + 1).map((page) => {
-          return <button key={page} onClick={() => search(page)}>{page}</button>
+          return <button style={{ backgroundColor: page === active ? 'yellow' : 'gray' }} key={page} onClick={() => { search(page), setActive(page) }}>{page}</button>
         })}
       </div>
     </div>
