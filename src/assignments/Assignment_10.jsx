@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 function JWT() {
-
+  const baseURL = import.meta.env.VITE_BASE_URL;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
@@ -10,8 +10,8 @@ function JWT() {
 
   async function handleLogin() {
     try {
-      const response = await axios.post('https://auth.dnjs.lk/api/login', {
-        email: email, password: password
+      const response = await axios.post(`${baseURL}/login`, {
+        email, password
       })
       console.log(response.data);
       setMsg("Successfully logged in");
@@ -19,7 +19,7 @@ function JWT() {
     }
     catch (error) {
       console.log(error);
-      setMsg("Login failed");
+      setMsg(error.response.data.error.message);
       setSuccess(false);
     }
   }
