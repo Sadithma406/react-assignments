@@ -51,7 +51,6 @@ function Authorization() {
         getToken(sessionStorage.getItem("token"));
       }
       setIsLoggedIn(true);
-      getToken(token);
       setMsg("Successfully logged in");
       setSuccess(true);
     }
@@ -79,8 +78,6 @@ function Authorization() {
           <br /><br />
         </div>
         <div>
-          <p style={{ color: success ? "green" : "red" }}>{msg}</p>
-
           {data && <div className="user-data">
             <img src={data.avatar ? data.avatar : userImg} alt="avatar" width="120" height="120"></img><br />
             <p>Name: {data.name}</p>
