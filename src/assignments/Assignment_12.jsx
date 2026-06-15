@@ -57,10 +57,13 @@ function Authorization() {
   }
 
   useEffect(() => {
-
-    setStatus(getToken() === null ? "login" : "loggedIn");
-    loadUser();
-
+    const token = getToken();
+    if (token) {
+      setStatus("loggedIn");
+      loadUser();
+    } else {
+      setStatus("login");
+    }
   }, [])
 
   if (status === "pending") {
