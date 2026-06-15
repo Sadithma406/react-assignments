@@ -138,7 +138,7 @@ function main() {
             <p>Description: <input type="text" value={description} onChange={(e) => setDescription(e.target.value)}></input></p>
             <p>Subscribed? : {data.subscribed === true ? "Yes" : "No"}</p>
             <br />
-            <button onClick={editDetails}>Save Changes</button>
+            <button onClick={editDetails}>Save Changes</button> &nbsp; &nbsp;
             <button onClick={loggingOut}>Log out</button>
           </div> : <p>Loading data...</p>}
         </div>}
