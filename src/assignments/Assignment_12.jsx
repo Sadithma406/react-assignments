@@ -17,7 +17,7 @@ function Authorization() {
 
   const getToken = () => localStorage.getItem("token") || sessionStorage.getItem("token")
   const getHeading = () => ({ Authorization: `Bearer ${getToken()}` })
-  function loadUser(method) {
+  function loadUser() {
     axios.get(`${baseURL}/user`, { headers: getHeading() }).then(
       response => {
         console.log(response.data);
@@ -43,7 +43,7 @@ function Authorization() {
       else {
         sessionStorage.setItem("token", token);
       }
-      loadUser(token);
+      loadUser();
       setStatus("loggedIn")
       setMsg("Successfully logged in");
       setSuccess(true);
