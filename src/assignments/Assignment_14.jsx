@@ -20,9 +20,34 @@ function main() {
   const getToken = () => localStorage.getItem("token") || sessionStorage.getItem("token");
   const getHeading = () => ({ Authorization: `Bearer ${getToken()}` })
 
-
+  const api = axios.create({ baseURL: baseURL })
+  api.interceptors.request.use(
+    config => {
+      const token = getToken();
+      if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+      }
+      return config;
+    },
+    error => {
+      return Promise.reject(error);
+    }
+  )
+  api.interceptors.response.use(
+    response => response,
+    error => {
+      console.log(error);
+      if (error.response && error.response.data && error.response.data.error) {
+        setMsg(error.response.data.error.message);
+      } else {
+        setMsg("Something went wrong");
+      }
+      setSuccess(false);
+      return Promise.reject(error);
+    }
+  )
   function loadUser() {
-    axios.get(`${baseURL}/user`, { headers: getHeading() }).then(
+    api.get(`/user`).then(
       response => {
         setData(response.data);
         setName(response.data.name);
@@ -37,7 +62,7 @@ function main() {
 
   async function handleLogin() {
     try {
-      const response = await axios.post(`${baseURL}/login`, { email, password })
+      const response = await api.post(`/login`, { email, password })
       const token = response.data.access_token;
       if (checked) {
         localStorage.setItem("token", token);
@@ -52,14 +77,12 @@ function main() {
     }
     catch (error) {
       console.log(error);
-      setMsg(error.response.data.error.message);
-      setSuccess(false);
       setData(null);
     }
   }
 
   function loggingOut() {
-    axios.post(`${baseURL}/logout`, {}, { headers: getHeading() }).then(
+    api.post(`/logout`, {},).then(
       response => {
         console.log(response.data);
         localStorage.removeItem("token");
@@ -72,14 +95,10 @@ function main() {
         setPassword("");
         setChecked(false);
       }
-    ).catch(
-      error => {
-        console.log(error);
-      }
-    )
+    ).catch(() => { })
   }
   function editDetails() {
-    axios.put(`${baseURL}/user`, { name, description }, { headers: getHeading() }).then(
+    api.put(`/user`, { name, description }).then(
       response => {
         console.log(response.data);
         setData(response.data);
@@ -87,13 +106,7 @@ function main() {
         setSuccess(true);
         alert("Details updated successfully");
       }
-    ).catch(
-      error => {
-        console.log(error.response.data.error.message);
-        setMsg(error.response.data.error.message);
-        setSuccess(false);
-      }
-    )
+    ).catch(() => { })
   }
 
   useEffect(() => {
