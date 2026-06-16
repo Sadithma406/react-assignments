@@ -89,8 +89,8 @@ function main() {
       }
     ).catch(
       error => {
-        console.log(error);
-        setMsg("Error updating details");
+        console.log(error.response.data.error.message);
+        setMsg(error.response.data.error.message);
         setSuccess(false);
       }
     )
