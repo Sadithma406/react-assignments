@@ -1,12 +1,22 @@
-#ass13 .user-data{
+#ass13 .user-data {
 
   border: 1px solid black;
-  width:500px;
+  width: 500px;
   padding: 10px;
-  margin:20px auto;
+  margin: 20px auto;
   align-items: center;
 }
-#ass13 .ProfileScreen img{
-  border-radius:50%;
+
+#ass13 .ProfileScreen img {
+  border-radius: 50%;
 }
 
+#ass13 .pass {
+  color: green;
+  background-color: rgb(227, 236, 227);
+}
+
+#ass13 .fail {
+  color: red;
+  background-color: rgb(255, 224, 224);
+}
