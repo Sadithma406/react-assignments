@@ -35,6 +35,7 @@ function App() {
             <li><h2><Link to="/assignment_14" style={{ textDecoration: 'none', color: 'white' }}>Assignment 14</Link></h2></li>
             <li><h2><Link to="/assignment_15" style={{ textDecoration: 'none', color: 'white' }}>Assignment 15</Link></h2></li>
             <li><h2><Link to="/assignment_16" style={{ textDecoration: 'none', color: 'white' }}>Assignment 16</Link></h2></li>
+            <li><h2><Link to="/assignment_17" style={{ textDecoration: 'none', color: 'white' }}>Assignment 17</Link></h2></li>
           </ul>
         </div>
       </section>

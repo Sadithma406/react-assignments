@@ -1,0 +1,23 @@
+#ass17 {
+  margin: auto;
+}
+
+#ass17 .inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+#ass17 .output {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+#ass17 .gradient {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  margin: 10px auto;
+}
