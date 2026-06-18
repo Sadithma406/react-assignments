@@ -1,0 +1,81 @@
+#ass18 ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 10px;
+  padding: 0px 50px;
+}
+
+#ass18 .gameOver {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+  width: 300px;
+  margin: 100px auto;
+  padding: 30px;
+}
+
+#ass18 .gameOver h1 {
+  color: red;
+  font-size: 50px;
+}
+
+#ass18 .gameOver p {
+  font-size: 25px;
+}
+
+#ass18 .gameOver button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#ass18 .gameOver button:hover {
+  background-color: #333;
+  color: white;
+}
+
+#ass18 .game {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+  width: 500px;
+  margin: 100px auto;
+  padding: 30px;
+}
+
+#ass18 .game h1 {
+  color: green;
+  font-size: 50px;
+}
+
+#ass18 .colorBox {
+  width: 500px;
+  height: 90px;
+}
+
+#ass18 .colorBox p {
+  padding-top: 30px;
+  padding-left: 0px;
+}
+
+#ass18 .game button {
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#ass18 .game button:hover {
+  background-color: #333;
+  color: white;
+}
+
+#ass18 .game button:active {
+  background-color: rgb(74, 74, 74);
+}
