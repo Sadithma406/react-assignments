@@ -7,13 +7,11 @@ function quizGame() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(-1);
-  const [msg, setMsg] = useState("")
   const [gameOver, setGameOver] = useState(false);
 
   function nextQuestion(selectedAnswer, correctAnswer) {
     if (correctAnswer === selectedAnswer) {
       setScore(score + 1);
-      setMsg("correct!!!")
     }
     if (currentQuestion === questions.length - 1) {
       setGameOver(true);
