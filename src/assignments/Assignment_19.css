@@ -1,0 +1,42 @@
+#ass19 .game {
+  border: 2px solid black;
+  margin: 20px auto;
+  width: 600px;
+  height: 350px;
+  padding: 20px;
+}
+
+#ass19 .gameOver {
+  border: 2px solid black;
+  margin: 20px auto;
+  width: 600px;
+  height: 250px;
+  padding: 20px;
+}
+
+#ass19 .question p {
+  font-size: 18px;
+}
+
+#ass19 .ansButtons {
+  border: none;
+  background-color: rgb(179, 179, 179);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 400px;
+  text-align: left;
+  margin: 5px 0px;
+}
+
+#ass19 .nextBtn {
+  padding: 10px;
+  border: 2px solid black;
+  margin-top: 20px;
+  width: 100px;
+  cursor: pointer;
+}
+
+#ass19 .nextBtn:hover {
+  background-color: aliceblue;
+}
