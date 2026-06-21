@@ -46,14 +46,10 @@ function quizGame() {
           <div className="question">
             {questions.map((q, index) =>
               index === currentQuestion &&
-              <p key={index}>{index + 1}. {q.question}</p>
-            )}
-          </div><br />
-          <div className="answers">
-            {questions.map((a, index) =>
-              index === currentQuestion &&
-              <div key={index}>
-                {a.answers.map((ans, key) =>
+              <div>
+                <p key={index}>{index + 1}. {q.question}</p>
+                <br />
+                {q.answers.map((ans, key) =>
                   <div key={key}>
                     <button onClick={() => setSelectedAnswer(key)} className="ansButtons" style={{ border: key === selectedAnswer ? '3px solid yellow' : 'none' }}>{ans}</button>
                     <br />
@@ -65,7 +61,8 @@ function quizGame() {
           <div><br />
             <button onClick={() => nextQuestion(selectedAnswer, questions[currentQuestion].correct)} className="nextBtn">Next</button>
           </div>
-        </div>} </div> : <p>Loading Questions...</p>}
+        </div>}
+      </div> : <p>Loading Questions...</p>}
       {gameOver && <div className="gameOver">
         <h1>Game Over</h1>
         <p>Your score is {score}/10</p><br /><br />
