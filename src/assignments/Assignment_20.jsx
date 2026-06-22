@@ -23,19 +23,10 @@ function QuizGame() {
     else {
       setCurrentQuestion(currentQuestion + 1);
     }
+    setChosenAnswer([...chosenAnswers, selectedAnswer]);
     setSelectedAnswer(-1);
   }
 
-  function answerSetting(key, currentQuestion) {
-    setSelectedAnswer(key);
-    setChosenAnswer(prev => {
-      const updated = [...prev];
-      updated[currentQuestion] = key
-
-      return updated;
-    })
-
-  }
 
   useEffect(() => {
     axios.get("https://apis.dnjs.lk/objects/quiz.php").then(
@@ -62,7 +53,7 @@ function QuizGame() {
               <div>
                 {q.answers.map((ans, key) =>
                   <div key={key}>
-                    <button onClick={() => { answerSetting(key, currentQuestion) }} className="ansButtons" style={{ border: key === selectedAnswer ? '3px solid yellow' : 'none' }}>{ans}</button>
+                    <button onClick={() => { setSelectedAnswer(key) }} className="ansButtons" style={{ border: key === selectedAnswer ? '3px solid yellow' : 'none' }}>{ans}</button>
                     <br />
                   </div>
                 )}
@@ -84,7 +75,7 @@ function QuizGame() {
             {q.answers.map((a, key) => {
               const ansColor = key === q.correct ? 'green' :
                 key === chosenAnswers[currentQuestion] && !isCorrect ? 'red' : 'black';
-              return (<p key={key} style={{ color: ansColor, borderColor: ansColor, borderWidth: ansColor === 'red' ? '2px' : '1px' }} className="answersReview">{a}</p>)
+              return (<p key={key} style={{ color: ansColor, borderColor: ansColor, borderWidth: ansColor === 'black' ? '1px' : '2px' }} className="answersReview">{a}</p>)
             })}
             <button onClick={() => { if (currentQuestion < questions.length - 1) { setCurrentQuestion(currentQuestion + 1) } }}>Next</button>&nbsp;&nbsp;
             <button onClick={() => { setCurrentQuestion(questions.length - 1) }}>Last</button>
