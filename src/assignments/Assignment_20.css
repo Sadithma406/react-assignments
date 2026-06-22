@@ -1,0 +1,57 @@
+#ass20 .game {
+  border: 2px solid black;
+  margin: 20px auto;
+  width: 600px;
+  height: 350px;
+  padding: 20px;
+}
+
+#ass20 .gameOver {
+  border: 2px solid black;
+  margin: 20px auto;
+  width: 600px;
+  height: 200px;
+  padding: 20px;
+}
+
+#ass20 .question p {
+  font-size: 18px;
+}
+
+#ass20 .ansButtons {
+  border: none;
+  background-color: rgb(179, 179, 179);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 400px;
+  text-align: left;
+  margin: 5px 0px;
+  color: black;
+}
+
+#ass20 .nextBtn {
+  padding: 10px;
+  border: 2px solid black;
+  margin-top: 20px;
+  width: 100px;
+  cursor: pointer;
+  color: black;
+}
+
+#ass20 .nextBtn:hover {
+  background-color: aliceblue;
+}
+
+#ass20 .answersReview {
+  margin-top: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  text-align: left;
+  font-size: 16px;
+}
+
+#ass20 .questionReview {
+  font-weight: bold;
+  font-size: 20px;
+}
