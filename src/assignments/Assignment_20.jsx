@@ -77,8 +77,9 @@ function QuizGame() {
                 key === chosenAnswers[currentQuestion] && !isCorrect ? 'red' : 'black';
               return (<p key={key} style={{ color: ansColor, borderColor: ansColor, borderWidth: ansColor === 'black' ? '1px' : '2px' }} className="answersReview">{a}</p>)
             })}
-            <button onClick={() => { if (currentQuestion < questions.length - 1) { setCurrentQuestion(currentQuestion + 1) } }}>Next</button>&nbsp;&nbsp;
-            <button onClick={() => { setCurrentQuestion(questions.length - 1) }}>Last</button>
+            <button disabled={currentQuestion === 0} onClick={() => { if (currentQuestion != 0) { setCurrentQuestion(currentQuestion - 1) } }}>Previous</button>&nbsp;&nbsp;
+            <button disabled={currentQuestion === questions.length - 1} onClick={() => { if (currentQuestion < questions.length - 1) { setCurrentQuestion(currentQuestion + 1) } }}>Next</button>
+
           </div>
 
         </div>}
