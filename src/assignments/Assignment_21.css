@@ -1,0 +1,19 @@
+#ass21 .uploadBtn {
+  cursor: pointer;
+  width: 120px;
+  height: 50px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+#ass21 .output {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+}
+
+#ass21 canvas {
+  cursor: pointer;
+}
